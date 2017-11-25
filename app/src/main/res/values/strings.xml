@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GankIo</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="gank_type">
+        <item>推荐</item>
+        <item>IOS</item>
+        <item>Android</item>
+        <item>休息视频</item>
+        <item>拓展资源</item>
+        <item>福利</item>
+        <item>前端</item>
+    </string-array>
+</resources>
