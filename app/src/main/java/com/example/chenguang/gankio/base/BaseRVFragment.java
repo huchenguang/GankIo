@@ -3,7 +3,7 @@ package com.example.chenguang.gankio.base;
 import javax.inject.Inject;
 
 /**
- * Created by chenguang on 2017/9/14.
+ * Created by chenguang on 2017/9/14 .
  */
 
 public abstract class BaseRVFragment<T extends BaseContract.BasePresenter> extends BaseFragment {
