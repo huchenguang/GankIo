@@ -19,11 +19,13 @@ public abstract class BaseRVFragment<T extends BaseContract.BasePresenter> exten
         }
     }
 
+
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDetach() {
+        super.onDetach();
         if (mPresenter != null) {
             mPresenter.detachView();
         }
     }
+
 }
