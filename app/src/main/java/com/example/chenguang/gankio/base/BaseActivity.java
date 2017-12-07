@@ -17,7 +17,7 @@ import butterknife.Unbinder;
 public abstract class BaseActivity extends AppCompatActivity {
     protected Activity mActivity;
     private Unbinder unbind;
-    protected UltimateBar mUltimateBar;
+    public UltimateBar mUltimateBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    protected void hideStatusBar() {
+    public void hideStatusBar() {
         WindowManager.LayoutParams attrs = getWindow().getAttributes();
         attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setAttributes(attrs);
@@ -67,7 +67,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }*/
     }
 
-    protected void showStatusBar() {
+    public void showStatusBar() {
         WindowManager.LayoutParams attrs = getWindow().getAttributes();
         attrs.flags &= ~WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setAttributes(attrs);

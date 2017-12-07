@@ -7,8 +7,8 @@ import android.os.Environment;
 import com.blankj.utilcode.util.SDCardUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.Target;
-import com.example.chenguang.gankio.ui.activity.GirlDetailActivity;
 import com.example.chenguang.gankio.ui.contract.GirlDetailContract;
+import com.example.chenguang.gankio.ui.fragment.GirlDetailFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,8 +23,8 @@ import rx.schedulers.Schedulers;
  * Created by chenguang on 2017/10/31.
  */
 
-public class GirlDetailPresenter extends RxPresenter<GirlDetailActivity> implements
-        GirlDetailContract.Presenter<GirlDetailActivity> {
+public class GirlDetailPresenter extends RxPresenter<GirlDetailFragment> implements
+        GirlDetailContract.Presenter<GirlDetailFragment> {
     @Override
     public void downloadPicture(final Context context, final String title, final String url) {
         Observable.create(new rx.Observable.OnSubscribe<Bitmap>() {

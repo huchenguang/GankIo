@@ -2,6 +2,7 @@ package com.example.chenguang.gankio.ui.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
@@ -29,6 +30,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -145,10 +147,10 @@ public class WelfareFragment extends BaseRVFragment<WelfarePresenter> implements
 
     @Override
     public void onItemClick(int position) {
-        GirlItemData item = mAdapter.getItem(position);
         Intent intent = new Intent(mActivity, GirlDetailActivity.class);
-        intent.putExtra("title", item.getTitle());
-        intent.putExtra("url", item.getUrl());
+        intent.putParcelableArrayListExtra("GirlItemDatas", (ArrayList<? extends Parcelable>)
+                mAdapter.getAllData());
+        intent.putExtra("position", position);
         mActivity.startActivity(intent);
     }
 

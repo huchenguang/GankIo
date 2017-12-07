@@ -113,11 +113,11 @@ public class GankTypeFragment extends BaseRVFragment<GankTypePresenter> implemen
     @Override
     public void showError() {
         //刷新 没有获取到数据
-        if (currPage == 1 && mAdapter.getCount() < 1) {
+        if (mAdapter.getCount() < 1) {
             mRecyclerView.showError();
-        } else {
-            mAdapter.pauseMore();
         }
+        mAdapter.pauseMore();
+        mRecyclerView.setRefreshing(false);
         ToastUtils.showShort("网络好像出错了(=.=)");
     }
 
